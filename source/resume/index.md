@@ -9,4 +9,4 @@ date: 2026-05-30 16:37:17
 
 ## 简历版本
 
-- [C++ / 图形学方向简历](cpp-graphics.md)
+- [C++ / 图形学方向简历](../resume/cpp-graphics/)
