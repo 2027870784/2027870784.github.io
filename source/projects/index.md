@@ -5,26 +5,13 @@ date: 2026-05-29
 
 # 项目经历
 
-## 个人技术门户与自驱动简历系统
+这里集中维护可被简历生成器读取的项目经历。新增项目时，建议在 `source/projects/` 下创建独立 Markdown 文件，并在 front-matter 中设置 `resume: true`、`directions`、`tech_stack`、`role` 和 `weight`。
 
-**项目类型：** 个人工程实践项目  
-**技术栈：** Hexo、Markdown、GitHub Pages、Git、YAML  
-**项目角色：** 独立开发
+## 项目列表
 
-### 项目简介
+- [从零构建 C++ 3D 软光栅渲染器](./soft-renderer.html)
+- [个人技术门户与自驱动简历系统](./tech-portal.html)
 
-本项目基于 Hexo 静态网站生成器构建个人技术门户，使用 Markdown 管理技术文章、项目经历和简历内容，并通过 GitHub Pages 部署为可在线访问的响应式网页。
+## 自动简历生成说明
 
-### 核心功能
-
-- Markdown 技术文章管理
-- 项目经历展示
-- 在线简历页面
-- 响应式页面适配
-- GitHub Pages 在线部署
-
-### 项目亮点
-
-- 使用静态网站生成器完成从内容到网页的自动转换
-- 将个人简历和项目经历沉淀为可持续维护的在线技术资产
-- 完成从本地开发、内容编写、静态构建到线上部署的完整工程流程
+构建前运行 `npm run resume:generate` 会读取这些项目文章，调用 DeepSeek API 生成结构化 JSON，并更新不同方向的简历页面。

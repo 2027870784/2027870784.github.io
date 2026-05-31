@@ -1,0 +1,39 @@
+---
+title: 个人技术门户与自驱动简历系统
+date: 2026-05-29
+resume: true
+directions:
+  - web
+  - frontend
+  - static-site
+  - tooling
+tech_stack:
+  - Hexo
+  - Markdown
+  - GitHub Pages
+  - Git
+  - YAML
+role: 独立开发
+weight: 80
+---
+
+# 个人技术门户与自驱动简历系统
+
+## 项目简介
+
+本项目基于 Hexo 静态网站生成器构建个人技术门户，使用 Markdown 管理技术文章、项目经历和简历内容，并通过 GitHub Pages 部署为可在线访问的响应式网页。
+
+## 核心功能
+
+- Markdown 技术文章管理。
+- 项目经历展示。
+- 在线简历页面。
+- 响应式页面适配。
+- GitHub Pages 在线部署。
+
+## 项目亮点
+
+- 使用静态网站生成器完成从内容到网页的自动转换。
+- 将个人简历和项目经历沉淀为可持续维护的在线技术资产。
+- 完成从本地开发、内容编写、静态构建到线上部署的完整工程流程。
+- 规划接入 AI 自动总结项目经历，生成结构化 JSON，并按不同求职方向动态生成简历页面。

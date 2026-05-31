@@ -1,0 +1,26 @@
+[
+  {
+    "id": "cpp-graphics",
+    "title": "C++ / 图形学方向简历",
+    "summary": "面向 C++、计算机图形学、渲染管线和游戏客户端图像基础相关岗位。",
+    "preferredDirections": ["cpp", "graphics", "game-client"],
+    "keywords": ["C++", "图形学", "渲染", "MVP", "Z-Buffer", "重心坐标", "光栅化", "CMake"],
+    "projectLimit": 4
+  },
+  {
+    "id": "web-frontend",
+    "title": "Web / 前端方向简历",
+    "summary": "面向 Web 页面、静态站点、内容工程化和前端基础开发方向。",
+    "preferredDirections": ["frontend", "web", "static-site"],
+    "keywords": ["HTML", "CSS", "JavaScript", "Hexo", "Markdown", "GitHub Pages", "响应式"],
+    "projectLimit": 4
+  },
+  {
+    "id": "general-software",
+    "title": "通用软件开发方向简历",
+    "summary": "面向通用软件开发、工程实践、工具链和自驱动项目经验展示。",
+    "preferredDirections": ["cpp", "graphics", "frontend", "web", "static-site", "tooling"],
+    "keywords": ["C++", "Git", "工程化", "项目实践", "Markdown", "自动化", "GitHub Pages"],
+    "projectLimit": 5
+  }
+]
