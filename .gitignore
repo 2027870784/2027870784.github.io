@@ -26,3 +26,4 @@ pnpm-debug.log*
 # Local test and automation artifacts
 output/
 .playwright-cli/
+.remote-test-attachments/
