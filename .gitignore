@@ -25,3 +25,7 @@ pnpm-debug.log*
 
 #VSCode 设置
 .vscode/
+
+#测试
+output/
+.remote-attachments
