@@ -28,4 +28,6 @@ pnpm-debug.log*
 
 #测试
 output/
-.remote-attachments
+.playwright-cli/
+.remote-test-attachments/
+.remote-attachments/
