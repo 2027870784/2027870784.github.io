@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "resume:generate": "node tools/generate-resume-data.mjs",
+    "resume:ai": "node scripts/generate_ai_resume.mjs",
     "build": "npm run resume:generate && hexo generate",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
