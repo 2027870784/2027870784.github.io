@@ -31,6 +31,10 @@ menu:
   #   Movie: /movies/ || fas fa-video
   # 链接: /link/ || fas fa-link
   # 关于: /about/ || fas fa-heart
+
+  #菜单栏目设置
+  #菜单格式：菜单名称: 链接 || 图标
+
   首页: / || fas fa-home
   归档: /archives/ || fas fa-archive
   标签: /tags/ || fas fa-tags
@@ -62,6 +66,7 @@ code_blocks:
 # Social media links
 # Formal:
 #   icon: link || the description || color
+#个人社交链接设置
 social:
   fab fa-github: https://github.com/2027870784 || Github || '#24292e'
   fas fa-envelope: mailto:2027870784@qq.com || Email || '#4a7dbe'
@@ -70,11 +75,11 @@ social:
 # Image Settings
 # --------------------------------------
 
-favicon: /img/final_logo.jpg
+favicon: /img/final_logo.jpg #网站图标设置
 
 avatar:
-  img: /img/tmp_avatar_img.png
-  effect: true
+  img: /img/tmp_avatar_img.png #侧栏头像设置
+  effect: true #旋转效果开启
 
 # Disable all banner images
 disable_top_img: false
@@ -306,7 +311,7 @@ aside:
       enable: true
       icon: fab fa-github
       text: Follow Me
-      link: https://github.com/2027870784
+      link: https://github.com/2027870784 #个人主页链接设置
   card_announcement:
     enable: true
     content: This is my Blog
@@ -491,8 +496,8 @@ math:
 search:
   # Choose: algolia_search / local_search / docsearch
   # leave it empty if you don't need search
-  use: local_search
-  placeholder: 搜索文章、项目、和简历内容
+  use: local_search #开启本地搜索
+  placeholder: 搜索文章、项目、和简历内容 #搜索框提示符设置
 
   # Algolia Search
   algolia_search:
@@ -550,7 +555,7 @@ comments:
   # Leave it empty if you don't need comments
   # Choose: Disqus/Disqusjs/Livere/Gitalk/Valine/Waline/Utterances/Facebook Comments/Twikoo/Giscus/Remark42/Artalk
   # Format of two comments system : Disqus,Waline
-  use: Giscus
+  use: Giscus #启用Giscus评论系统
   # Display the comment name next to the button
   text: true
   # Lazyload: The comment system will be load when comment element enters the browser's viewport.
@@ -646,6 +651,7 @@ twikoo:
 
 # Giscus
 # https://giscus.app/
+#Giscus评论系统配置，根据官网说明进行配置
 giscus:
   repo: 2027870784/2027870784.github.io
   repo_id: R_kgDOSsGr1w

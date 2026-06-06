@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: "D's Blog"
+title: "D's Blog" #站点标题设置
 subtitle: '首页'
-description: 'DemoDog的技术博客'
-keywords: blog wblog tech portal resume '博客' '简历' '技术博客' '门户' '个人简介'
+description: 'DemoDog的技术博客' #站点描述设置
+keywords: blog wblog tech portal resume '博客' '简历' '技术博客' '门户' '个人简介' #站点关键词设置
 author: DemoDog
-language: zh-CN
+language: zh-CN #站点语言设置
 timezone: ''
 
 # URL
@@ -96,7 +96,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: butterfly
+theme: butterfly #主题设定为Butterfly
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
