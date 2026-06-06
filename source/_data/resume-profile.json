@@ -1,0 +1,46 @@
+{
+  "name": "DemoDog",
+  "target": "计算机相关开发岗位",
+  "contact": {
+    "email": "2027870784@qq.com",
+    "github": "https://github.com/2027870784"
+  },
+  "education": [
+    {
+      "school": "东北大学秦皇岛分校",
+      "major": "计算机科学与技术",
+      "degree": "本科",
+      "period": "2024.09 - 至今",
+      "highlights": [
+        "相关课程：数据结构、算法分析、线性代数、微积分、离散数学、C++ 程序设计",
+        "独立完成现代图形学入门课程 GAMES101，学习渲染管线理论与工程实现"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "category": "编程语言",
+      "items": ["C++"]
+    },
+    {
+      "category": "开发工具",
+      "items": ["Git", "Visual Studio Code", "CMake"]
+    },
+    {
+      "category": "工程基础",
+      "items": ["STL 容器", "内存管理", "面向对象设计"]
+    },
+    {
+      "category": "图形学基础",
+      "items": ["MVP 变换", "重心坐标插值", "深度测试", "Lambert 漫反射", "Blinn-Phong 光照模型"]
+    },
+    {
+      "category": "数学基础",
+      "items": ["线性代数", "矩阵变换", "向量运算"]
+    }
+  ],
+  "extras": [
+    "英语能力：通过英语六级，可独立阅读英文技术文档与图形学相关资料",
+    "技术兴趣：持续学习渲染管线、图形学基础、数学计算与 C++ 工程实现"
+  ]
+}

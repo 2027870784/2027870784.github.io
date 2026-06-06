@@ -38,7 +38,9 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Build with Hexo
-        run: npx hexo generate
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        run: npm run build
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
