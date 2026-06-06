@@ -3,7 +3,7 @@
     "id": "cpp-graphics",
     "title": "C++ / 图形学方向简历",
     "summary": "面向 C++、计算机图形学、渲染管线和游戏客户端图像基础相关岗位。",
-    "generatedAt": "2026-06-06T11:47:55.338Z",
+    "generatedAt": "2026-06-06T12:40:08.494Z",
     "profile": {
       "name": "DemoDog",
       "target": "计算机相关开发岗位",
@@ -93,7 +93,7 @@
     },
     "projects": [
       {
-        "id": "soft-renderer",
+        "id": "soft-render3d",
         "name": "从零构建 C++ 3D 软光栅渲染器",
         "role": "独立开发",
         "directions": [
@@ -103,27 +103,33 @@
         ],
         "techStack": [
           "C++",
+          "CMake",
           "MVP 变换",
           "重心坐标插值",
           "Z-Buffer",
-          "Lambert 漫反射"
+          "Lambert 漫反射",
+          "PPM"
         ],
-        "summary": "为深入理解图形渲染与游戏客户端图像绘制基础，在不依赖高级图形 API 的前提下，独立使用 C++ 实现软件渲染器，从模型输入到像素输出形成完整闭环。",
+        "summary": "本项目是一个从零实现的 C++ 软件 3D 渲染器。在不依赖 OpenGL、DirectX 等高级图形 API 的前提下，手写数学库、三角形网格、帧缓冲、光栅化器和基础渲染管线，完成从模型数据到像素图像输出的完整闭环。",
         "highlights": [
-          "手写向量与矩阵运算库，完成模型坐标变换与空间位置计算",
-          "基于重心坐标插值实现三角形填充，通过 Z-Buffer 解决遮挡问题"
+          "数学基础库：实现 Vector3、Vector4、Matrix4 等基础类型，支持点乘、叉乘、归一化和矩阵运算",
+          "几何数据建模：使用 Triangle 和 Mesh 组织三角形、顶点颜色和法线信息",
+          "MVP 渲染管线：完成 Model、View、Projection 矩阵变换，以及透视除法和屏幕空间映射",
+          "三角形光栅化：基于屏幕空间包围盒、叉积判定和重心坐标插值完成三角形填充",
+          "深度测试：使用 Z-Buffer 处理像素遮挡关系，保证前后物体覆盖正确",
+          "基础光照：实现 Lambert 漫反射模型，并处理模型旋转后的法线变换问题"
         ],
         "resumeBullets": [
-          "手写向量与矩阵运算库，完成模型坐标变换、空间位置计算等基础能力搭建",
-          "基于重心坐标插值完成三角形填充算法，并通过深度测试（Z-Buffer）解决像素遮挡问题",
-          "完成 MVP 变换并实现简易 Lambert 漫反射，构建基础光照计算流程",
-          "使用 AABB 包围盒预筛减少无效三角形遍历，提升光栅化阶段处理效率"
+          "数学基础库：实现 Vector3、Vector4、Matrix4 等基础类型，支持点乘、叉乘、归一化和矩阵运算",
+          "几何数据建模：使用 Triangle 和 Mesh 组织三角形、顶点颜色和法线信息",
+          "MVP 渲染管线：完成 Model、View、Projection 矩阵变换，以及透视除法和屏幕空间映射",
+          "三角形光栅化：基于屏幕空间包围盒、叉积判定和重心坐标插值完成三角形填充"
         ],
         "links": {
           "github": "https://github.com/2027870784/soft_render3d"
         },
         "weight": 95,
-        "sourceFile": "source/projects/soft-renderer.md"
+        "sourceFile": "source/projects/soft-render3d/index.md"
       }
     ]
   },
@@ -131,7 +137,7 @@
     "id": "web-frontend",
     "title": "Web / 前端方向简历",
     "summary": "面向 Web 页面、静态站点、内容工程化和前端基础开发方向。",
-    "generatedAt": "2026-06-06T11:47:55.340Z",
+    "generatedAt": "2026-06-06T12:40:08.496Z",
     "profile": {
       "name": "DemoDog",
       "target": "计算机相关开发岗位",
@@ -220,7 +226,7 @@
     },
     "projects": [
       {
-        "id": "tech-portal",
+        "id": "tech-portal-resume",
         "name": "个人技术门户与自驱动简历系统",
         "role": "独立开发",
         "directions": [
@@ -231,26 +237,141 @@
         ],
         "techStack": [
           "Hexo",
+          "Butterfly",
           "Markdown",
           "GitHub Pages",
+          "GitHub Actions",
           "Git",
-          "YAML"
+          "YAML",
+          "Node.js"
         ],
-        "summary": "基于Hexo构建个人技术门户，使用Markdown管理技术文章、项目经历和简历，通过GitHub Pages部署为响应式网页。",
+        "summary": "本项目基于 Hexo 静态网站生成器搭建个人技术门户，使用 Markdown 统一管理技术文章、项目经历、关于页面和在线简历，并通过 GitHub Actions 自动构建后部署到 GitHub Pages。项目后续规划并实验了 AI 简历自动化流程：从项目经历文章中提取结构化 JSON 数据，再按不同求职方向生成多版本简历页面。",
         "highlights": [
-          "使用静态网站生成器完成从内容到网页的自动转换",
-          "将个人简历和项目经历沉淀为可持续维护的在线技术资产",
-          "完成从本地开发、内容编写、静态构建到线上部署的完整工程流程",
-          "规划接入AI自动总结项目经历，生成结构化JSON，动态生成简历页面"
+          "技术文章用于记录学习过程和项目复盘",
+          "项目经历用于结构化展示个人实践成果",
+          "在线简历用于按不同方向展示能力画像",
+          "GitHub Actions 用于完成从源码提交到线上发布的自动化闭环",
+          "技术博客管理：使用 Hexo 和 Markdown 管理文章内容，支持分类、标签、归档和本地搜索",
+          "项目经历展示：在 source/projects/ 下维护项目页面，集中展示项目背景、职责、实现和收获"
         ],
         "resumeBullets": [
-          "使用Hexo静态网站生成器和Markdown构建个人技术门户，实现技术文章、项目经历和简历的在线管理",
-          "通过GitHub Pages部署响应式网页，完成从内容编写到线上部署的完整工程流程",
-          "规划接入AI自动总结项目经历，生成结构化JSON，实现按求职方向动态生成简历页面"
+          "技术文章用于记录学习过程和项目复盘",
+          "项目经历用于结构化展示个人实践成果",
+          "在线简历用于按不同方向展示能力画像",
+          "GitHub Actions 用于完成从源码提交到线上发布的自动化闭环"
         ],
         "links": {},
-        "weight": 80,
-        "sourceFile": "source/projects/tech-portal.md"
+        "weight": 90,
+        "sourceFile": "source/projects/tech-portal-resume/index.md"
+      },
+      {
+        "id": "content-acceptance-demo",
+        "name": "技术门户内容体系与验收展示优化",
+        "role": "内容结构设计与页面维护",
+        "directions": [
+          "web",
+          "static-site",
+          "software-engineering"
+        ],
+        "techStack": [
+          "Hexo",
+          "Markdown",
+          "Butterfly",
+          "Git",
+          "信息架构"
+        ],
+        "summary": "本项目围绕个人技术门户的内容体系展开，重点不是新增复杂功能，而是让博客、项目经历、简历和关于页面形成清晰结构，使站点在项目验收时能够完整展示学习过程、技术实践和阶段性成果。",
+        "highlights": [
+          "梳理现有 source/ 目录结构，确认博客、项目和简历的维护方式",
+          "新增围绕 Hexo、GitHub Actions、AI 简历生成、Giscus 评论系统的技术文章",
+          "在 source/projects/ 下新增项目详情页，使项目列表有更多可点击内容",
+          "在 source/resume/ 下新增 Web / 前端方向和通用软件开发方向简历",
+          "更新项目经历入口页和简历入口页，保证新增内容可以被正常访问",
+          "控制内容真实性，避免虚构公司经历、上线规模或未完成能力"
+        ],
+        "resumeBullets": [
+          "梳理现有 source/ 目录结构，确认博客、项目和简历的维护方式",
+          "新增围绕 Hexo、GitHub Actions、AI 简历生成、Giscus 评论系统的技术文章",
+          "在 source/projects/ 下新增项目详情页，使项目列表有更多可点击内容",
+          "在 source/resume/ 下新增 Web / 前端方向和通用软件开发方向简历"
+        ],
+        "links": {},
+        "weight": 78,
+        "sourceFile": "source/projects/content-acceptance-demo/index.md"
+      },
+      {
+        "id": "giscus-comment-review",
+        "name": "Giscus 评论系统接入与 AI 审核方案",
+        "role": "独立设计与配置",
+        "directions": [
+          "web",
+          "static-site",
+          "software-engineering",
+          "tooling"
+        ],
+        "techStack": [
+          "Hexo",
+          "Butterfly",
+          "Giscus",
+          "GitHub Discussions",
+          "GitHub Actions",
+          "YAML"
+        ],
+        "summary": "本项目为 Hexo 技术门户接入 Giscus 评论系统，使静态站点具备基于 GitHub Discussions 的互动能力。同时结合静态站点没有后端的特点，设计后续通过 GitHub Actions 或 Webhook 实现 AI 异步审核的方案。",
+        "highlights": [
+          "在 Butterfly 主题配置中启用 Giscus 评论系统",
+          "使用 GitHub Discussions 作为评论数据承载位置",
+          "按页面路径映射评论讨论，保证不同文章评论相互独立",
+          "配置中文界面、浅色和深色主题适配",
+          "分析静态站点评论审核边界，规划 AI 异步审核方案",
+          "正常技术讨论：不处理"
+        ],
+        "resumeBullets": [
+          "在 Butterfly 主题配置中启用 Giscus 评论系统",
+          "使用 GitHub Discussions 作为评论数据承载位置",
+          "按页面路径映射评论讨论，保证不同文章评论相互独立",
+          "配置中文界面、浅色和深色主题适配"
+        ],
+        "links": {},
+        "weight": 82,
+        "sourceFile": "source/projects/giscus-comment-review/index.md"
+      },
+      {
+        "id": "ai-resume-system",
+        "name": "AI 辅助多方向简历生成系统",
+        "role": "方案设计与原型开发",
+        "directions": [
+          "ai-tooling",
+          "web",
+          "software-engineering",
+          "tooling"
+        ],
+        "techStack": [
+          "Markdown",
+          "YAML Front Matter",
+          "Node.js",
+          "JSON",
+          "Hexo",
+          "AI Prompt"
+        ],
+        "summary": "本项目围绕个人技术门户中的项目经历和简历模块展开，目标是把已经沉淀的项目 Markdown 内容进一步结构化，并探索通过 AI 或本地规则生成不同方向的在线简历页面。",
+        "highlights": [
+          "将项目页从普通 Markdown 扩展为可被程序识别的内容数据源",
+          "使用 front matter 标注项目是否进入简历、适合方向、技术栈和排序权重",
+          "设计“项目内容 -> 结构化 JSON -> 多方向简历页面”的生成流程",
+          "在 AI 不可用时保留本地规则降级，保证站点构建稳定",
+          "为 Web、C++ / 图形学、通用软件开发等方向维护不同简历版本",
+          "software-engineering"
+        ],
+        "resumeBullets": [
+          "将项目页从普通 Markdown 扩展为可被程序识别的内容数据源",
+          "使用 front matter 标注项目是否进入简历、适合方向、技术栈和排序权重",
+          "设计“项目内容 -> 结构化 JSON -> 多方向简历页面”的生成流程",
+          "在 AI 不可用时保留本地规则降级，保证站点构建稳定"
+        ],
+        "links": {},
+        "weight": 88,
+        "sourceFile": "source/projects/ai-resume-system/index.md"
       }
     ]
   },
@@ -258,7 +379,7 @@
     "id": "general-software",
     "title": "通用软件开发方向简历",
     "summary": "面向通用软件开发、工程实践、工具链和自驱动项目经验展示。",
-    "generatedAt": "2026-06-06T11:47:55.340Z",
+    "generatedAt": "2026-06-06T12:40:08.496Z",
     "profile": {
       "name": "DemoDog",
       "target": "计算机相关开发岗位",
@@ -350,7 +471,7 @@
     },
     "projects": [
       {
-        "id": "tech-portal",
+        "id": "tech-portal-resume",
         "name": "个人技术门户与自驱动简历系统",
         "role": "独立开发",
         "directions": [
@@ -361,29 +482,109 @@
         ],
         "techStack": [
           "Hexo",
+          "Butterfly",
           "Markdown",
           "GitHub Pages",
+          "GitHub Actions",
           "Git",
-          "YAML"
+          "YAML",
+          "Node.js"
         ],
-        "summary": "基于Hexo构建个人技术门户，使用Markdown管理技术文章、项目经历和简历，通过GitHub Pages部署为响应式网页。",
+        "summary": "本项目基于 Hexo 静态网站生成器搭建个人技术门户，使用 Markdown 统一管理技术文章、项目经历、关于页面和在线简历，并通过 GitHub Actions 自动构建后部署到 GitHub Pages。项目后续规划并实验了 AI 简历自动化流程：从项目经历文章中提取结构化 JSON 数据，再按不同求职方向生成多版本简历页面。",
         "highlights": [
-          "使用静态网站生成器完成从内容到网页的自动转换",
-          "将个人简历和项目经历沉淀为可持续维护的在线技术资产",
-          "完成从本地开发、内容编写、静态构建到线上部署的完整工程流程",
-          "规划接入AI自动总结项目经历，生成结构化JSON，动态生成简历页面"
+          "技术文章用于记录学习过程和项目复盘",
+          "项目经历用于结构化展示个人实践成果",
+          "在线简历用于按不同方向展示能力画像",
+          "GitHub Actions 用于完成从源码提交到线上发布的自动化闭环",
+          "技术博客管理：使用 Hexo 和 Markdown 管理文章内容，支持分类、标签、归档和本地搜索",
+          "项目经历展示：在 source/projects/ 下维护项目页面，集中展示项目背景、职责、实现和收获"
         ],
         "resumeBullets": [
-          "使用Hexo静态网站生成器和Markdown构建个人技术门户，实现技术文章、项目经历和简历的在线管理",
-          "通过GitHub Pages部署响应式网页，完成从内容编写到线上部署的完整工程流程",
-          "规划接入AI自动总结项目经历，生成结构化JSON，实现按求职方向动态生成简历页面"
+          "技术文章用于记录学习过程和项目复盘",
+          "项目经历用于结构化展示个人实践成果",
+          "在线简历用于按不同方向展示能力画像",
+          "GitHub Actions 用于完成从源码提交到线上发布的自动化闭环"
         ],
         "links": {},
-        "weight": 80,
-        "sourceFile": "source/projects/tech-portal.md"
+        "weight": 90,
+        "sourceFile": "source/projects/tech-portal-resume/index.md"
       },
       {
-        "id": "soft-renderer",
+        "id": "giscus-comment-review",
+        "name": "Giscus 评论系统接入与 AI 审核方案",
+        "role": "独立设计与配置",
+        "directions": [
+          "web",
+          "static-site",
+          "software-engineering",
+          "tooling"
+        ],
+        "techStack": [
+          "Hexo",
+          "Butterfly",
+          "Giscus",
+          "GitHub Discussions",
+          "GitHub Actions",
+          "YAML"
+        ],
+        "summary": "本项目为 Hexo 技术门户接入 Giscus 评论系统，使静态站点具备基于 GitHub Discussions 的互动能力。同时结合静态站点没有后端的特点，设计后续通过 GitHub Actions 或 Webhook 实现 AI 异步审核的方案。",
+        "highlights": [
+          "在 Butterfly 主题配置中启用 Giscus 评论系统",
+          "使用 GitHub Discussions 作为评论数据承载位置",
+          "按页面路径映射评论讨论，保证不同文章评论相互独立",
+          "配置中文界面、浅色和深色主题适配",
+          "分析静态站点评论审核边界，规划 AI 异步审核方案",
+          "正常技术讨论：不处理"
+        ],
+        "resumeBullets": [
+          "在 Butterfly 主题配置中启用 Giscus 评论系统",
+          "使用 GitHub Discussions 作为评论数据承载位置",
+          "按页面路径映射评论讨论，保证不同文章评论相互独立",
+          "配置中文界面、浅色和深色主题适配"
+        ],
+        "links": {},
+        "weight": 82,
+        "sourceFile": "source/projects/giscus-comment-review/index.md"
+      },
+      {
+        "id": "ai-resume-system",
+        "name": "AI 辅助多方向简历生成系统",
+        "role": "方案设计与原型开发",
+        "directions": [
+          "ai-tooling",
+          "web",
+          "software-engineering",
+          "tooling"
+        ],
+        "techStack": [
+          "Markdown",
+          "YAML Front Matter",
+          "Node.js",
+          "JSON",
+          "Hexo",
+          "AI Prompt"
+        ],
+        "summary": "本项目围绕个人技术门户中的项目经历和简历模块展开，目标是把已经沉淀的项目 Markdown 内容进一步结构化，并探索通过 AI 或本地规则生成不同方向的在线简历页面。",
+        "highlights": [
+          "将项目页从普通 Markdown 扩展为可被程序识别的内容数据源",
+          "使用 front matter 标注项目是否进入简历、适合方向、技术栈和排序权重",
+          "设计“项目内容 -> 结构化 JSON -> 多方向简历页面”的生成流程",
+          "在 AI 不可用时保留本地规则降级，保证站点构建稳定",
+          "为 Web、C++ / 图形学、通用软件开发等方向维护不同简历版本",
+          "software-engineering"
+        ],
+        "resumeBullets": [
+          "将项目页从普通 Markdown 扩展为可被程序识别的内容数据源",
+          "使用 front matter 标注项目是否进入简历、适合方向、技术栈和排序权重",
+          "设计“项目内容 -> 结构化 JSON -> 多方向简历页面”的生成流程",
+          "在 AI 不可用时保留本地规则降级，保证站点构建稳定"
+        ],
+        "links": {},
+        "weight": 88,
+        "sourceFile": "source/projects/ai-resume-system/index.md"
+      },
+      {
+        "id": "soft-render3d",
         "name": "从零构建 C++ 3D 软光栅渲染器",
         "role": "独立开发",
         "directions": [
@@ -393,27 +594,68 @@
         ],
         "techStack": [
           "C++",
+          "CMake",
           "MVP 变换",
           "重心坐标插值",
           "Z-Buffer",
-          "Lambert 漫反射"
+          "Lambert 漫反射",
+          "PPM"
         ],
-        "summary": "为深入理解图形渲染与游戏客户端图像绘制基础，在不依赖高级图形 API 的前提下，独立使用 C++ 实现软件渲染器，从模型输入到像素输出形成完整闭环。",
+        "summary": "本项目是一个从零实现的 C++ 软件 3D 渲染器。在不依赖 OpenGL、DirectX 等高级图形 API 的前提下，手写数学库、三角形网格、帧缓冲、光栅化器和基础渲染管线，完成从模型数据到像素图像输出的完整闭环。",
         "highlights": [
-          "手写向量与矩阵运算库，完成模型坐标变换与空间位置计算",
-          "基于重心坐标插值实现三角形填充，通过 Z-Buffer 解决遮挡问题"
+          "数学基础库：实现 Vector3、Vector4、Matrix4 等基础类型，支持点乘、叉乘、归一化和矩阵运算",
+          "几何数据建模：使用 Triangle 和 Mesh 组织三角形、顶点颜色和法线信息",
+          "MVP 渲染管线：完成 Model、View、Projection 矩阵变换，以及透视除法和屏幕空间映射",
+          "三角形光栅化：基于屏幕空间包围盒、叉积判定和重心坐标插值完成三角形填充",
+          "深度测试：使用 Z-Buffer 处理像素遮挡关系，保证前后物体覆盖正确",
+          "基础光照：实现 Lambert 漫反射模型，并处理模型旋转后的法线变换问题"
         ],
         "resumeBullets": [
-          "手写向量与矩阵运算库，完成模型坐标变换、空间位置计算等基础能力搭建",
-          "基于重心坐标插值完成三角形填充算法，并通过深度测试（Z-Buffer）解决像素遮挡问题",
-          "完成 MVP 变换并实现简易 Lambert 漫反射，构建基础光照计算流程",
-          "使用 AABB 包围盒预筛减少无效三角形遍历，提升光栅化阶段处理效率"
+          "数学基础库：实现 Vector3、Vector4、Matrix4 等基础类型，支持点乘、叉乘、归一化和矩阵运算",
+          "几何数据建模：使用 Triangle 和 Mesh 组织三角形、顶点颜色和法线信息",
+          "MVP 渲染管线：完成 Model、View、Projection 矩阵变换，以及透视除法和屏幕空间映射",
+          "三角形光栅化：基于屏幕空间包围盒、叉积判定和重心坐标插值完成三角形填充"
         ],
         "links": {
           "github": "https://github.com/2027870784/soft_render3d"
         },
         "weight": 95,
-        "sourceFile": "source/projects/soft-renderer.md"
+        "sourceFile": "source/projects/soft-render3d/index.md"
+      },
+      {
+        "id": "content-acceptance-demo",
+        "name": "技术门户内容体系与验收展示优化",
+        "role": "内容结构设计与页面维护",
+        "directions": [
+          "web",
+          "static-site",
+          "software-engineering"
+        ],
+        "techStack": [
+          "Hexo",
+          "Markdown",
+          "Butterfly",
+          "Git",
+          "信息架构"
+        ],
+        "summary": "本项目围绕个人技术门户的内容体系展开，重点不是新增复杂功能，而是让博客、项目经历、简历和关于页面形成清晰结构，使站点在项目验收时能够完整展示学习过程、技术实践和阶段性成果。",
+        "highlights": [
+          "梳理现有 source/ 目录结构，确认博客、项目和简历的维护方式",
+          "新增围绕 Hexo、GitHub Actions、AI 简历生成、Giscus 评论系统的技术文章",
+          "在 source/projects/ 下新增项目详情页，使项目列表有更多可点击内容",
+          "在 source/resume/ 下新增 Web / 前端方向和通用软件开发方向简历",
+          "更新项目经历入口页和简历入口页，保证新增内容可以被正常访问",
+          "控制内容真实性，避免虚构公司经历、上线规模或未完成能力"
+        ],
+        "resumeBullets": [
+          "梳理现有 source/ 目录结构，确认博客、项目和简历的维护方式",
+          "新增围绕 Hexo、GitHub Actions、AI 简历生成、Giscus 评论系统的技术文章",
+          "在 source/projects/ 下新增项目详情页，使项目列表有更多可点击内容",
+          "在 source/resume/ 下新增 Web / 前端方向和通用软件开发方向简历"
+        ],
+        "links": {},
+        "weight": 78,
+        "sourceFile": "source/projects/content-acceptance-demo/index.md"
       }
     ]
   }
