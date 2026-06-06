@@ -8,6 +8,7 @@ const sourceDir = path.join(rootDir, 'source');
 const dataDir = path.join(sourceDir, '_data');
 const projectsDir = path.join(sourceDir, 'projects');
 const resumeDir = path.join(sourceDir, 'resume');
+const aiResumeDir = path.join(resumeDir, 'ai');
 
 const DEEPSEEK_BASE_URL = (process.env.DEEPSEEK_BASE_URL || 'https://api.deepseek.com').replace(/\/$/, '');
 const DEEPSEEK_API_URL = process.env.DEEPSEEK_API_URL || `${DEEPSEEK_BASE_URL}/chat/completions`;
@@ -43,7 +44,7 @@ async function loadEnvFile(filePath) {
 
 async function main() {
   await mkdir(dataDir, { recursive: true });
-  await mkdir(resumeDir, { recursive: true });
+  await mkdir(aiResumeDir, { recursive: true });
 
   const profile = await readJson(path.join(dataDir, 'resume-profile.json'));
   const directions = await readJson(path.join(dataDir, 'resume-directions.json'));
@@ -60,7 +61,6 @@ async function main() {
 
   await writeJson(path.join(dataDir, 'projects.generated.json'), projects);
   await writeJson(path.join(dataDir, 'resumes.generated.json'), resumes);
-  await writeResumeIndex(resumes);
   for (const resume of resumes) {
     await writeResumePage(resume);
   }
@@ -355,18 +355,8 @@ function scoreProject(project, direction) {
   return score;
 }
 
-async function writeResumeIndex(resumes) {
-  const links = resumes
-    .map((resume) => `- [${resume.title}](./${resume.id}/)：${resume.summary}`)
-    .join('\n');
-
-  const content = `---\ntitle: 简历\ndate: ${formatDate()}\n---\n\n# 我的简历\n\n以下简历由项目经历文章自动生成。新增或修改 \`source/projects/\` 下的项目文章后，运行 \`npm run resume:generate\` 即可更新。\n\n## 简历版本\n\n${links}\n\n## 数据来源\n\n- 项目文章：\`source/projects/*.md\`\n- 生成数据：\`source/_data/projects.generated.json\`、\`source/_data/resumes.generated.json\`\n- 生成脚本：\`tools/generate-resume-data.mjs\`\n`;
-
-  await writeFile(path.join(resumeDir, 'index.md'), content, 'utf8');
-}
-
 async function writeResumePage(resume) {
-  const dir = path.join(resumeDir, resume.id);
+  const dir = path.join(aiResumeDir, resume.id);
   await mkdir(dir, { recursive: true });
 
   const profile = resume.profile;
